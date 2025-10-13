@@ -22,7 +22,7 @@ const StructuralSteelDetailingServices = () => (
         />
         <div className="absolute left-8 top-1/3 z-10" style={{ maxWidth: '60vw' }}>
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white px-20"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white px-20 mb-2 w-auto h-auto bg-gray-800 bg-opacity-50 rounded"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}
           >
             Structural Steel Detailing Services

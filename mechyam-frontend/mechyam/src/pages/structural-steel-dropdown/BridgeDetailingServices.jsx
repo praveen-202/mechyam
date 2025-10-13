@@ -13,10 +13,10 @@ const BridgeDetailingServices = () => (
           src={brige}
           alt="Steel Structure Background"
           className="w-full"
-          style={{ height: '70vh', width: '100vw', objectFit: 'cover', objectPosition: 'center' }}
+          style={{ height: '50vh', width: '100vw', objectFit: 'cover', objectPosition: 'center' }}
         />
         <div className="absolute left-0 top-1/3 z-10 ml-8" style={{ maxWidth: '50vw' }}>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-10" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-10 w-auto h-auto bg-opacity-50 bg-gray-800 rounded" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.6)' }}>
             Bridge Detailing Services
           </h1>
         </div>
