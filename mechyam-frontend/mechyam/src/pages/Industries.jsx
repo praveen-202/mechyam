@@ -13,8 +13,8 @@ const industries = () => (
           className="w-full"
           style={{ height: "50vh", objectFit: "cover" }}
         />
-        <div className="absolute left-0 top-1/3 z-10 ml-8">
-          <h1 className="text-6xl font-extrabold text-white mb-2 px-20" style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}>
+        <div className="absolute left-0 top-1/3 z-10 ml-8 ">
+          <h1 className="text-6xl font-extrabold text-white mb-2 px-20 w-auto h-auto bg-gray-800 rounded bg-opacity-50" style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}>
             Industries
           </h1>
         </div>

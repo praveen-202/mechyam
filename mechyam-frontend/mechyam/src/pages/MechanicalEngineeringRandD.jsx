@@ -24,7 +24,7 @@ const MechnicalEngineeringRandD = () => (
         style={{ maxWidth: "50vw" }}
       >
         <h1
-          className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20"
+          className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20 w-auto h-auto bg-gray-800 bg-opacity-50 rounded"
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
         >
           Mechanical Engineering R&D
