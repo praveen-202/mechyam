@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
-import steelDetailingImg from "../assets/StructuralSteelImages/structural-steel-detailing.jpeg"; 
+import steelDetailingImg from "../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
 import structuralsteel from "../assets/StructuralSteelImages/structuralsteel.jpg";
 
 const SteelStructure = () => (
@@ -28,7 +28,7 @@ const SteelStructure = () => (
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20"
             style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
           >
-              Structural Steel
+            Structural Steel Detailings
           </h1>
         </div>
       </div>
