@@ -10,7 +10,7 @@ const OilAndGas = () => (
           src={brige}
           className="w-full"
           style={{
-            height: "70vh",
+            height: "50vh",
             width: "100vw",
             objectFit: "cover",
             objectPosition: "center",

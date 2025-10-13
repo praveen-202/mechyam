@@ -13,7 +13,7 @@ const StructuralRAndD = () => (
         alt="Steel Structure Background"
         className="w-full"
         style={{
-          height: "70vh",
+          height: "50vh",
           width: "100vw",
           objectFit: "cover",
           objectPosition: "center",
