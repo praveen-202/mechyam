@@ -29,6 +29,7 @@ import ComputerAidedEngineering from "./pages/mechanical-dropdown/ComputerAidedE
  import Transportation from "./pages/industries-dropdown/Transportation";
  import Company from "./pages/about-dropdown/Company";
  import Testimonials from "./pages/about-dropdown/Testimonials";
+ import AdminLogin from "./pages/more-dropdown/AdminLogin";
  import Footer from "./pages/Footer.jsx";
 
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/company" element={<Company />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/contact" element={<ContactPage />} />
       <Route path="/careers" element={<CareerPage />} />
         <Route path="/career/:id" element={<JobDetailsPage />} />
