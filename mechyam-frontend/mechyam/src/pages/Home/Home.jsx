@@ -4,17 +4,18 @@ import { Link } from "react-scroll";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// 🖼 Importing all images used in the page
 import AboutImg from "../../assets/About.jpg";
 import industriesImg from "../../assets/Industries.jpg";
 import projectsImg from "../../assets/Projects.jpg";
 import steelStructureImg from "../../assets/Steel Structure.jpg";
 import mechanicalImg from "../../assets/Mechanical.jpg";
 import rndImg from "../../assets/RnD.jpg";
-
 import structuralImg from "../../assets/structural-steel-detailing.jpeg";
 import steelDetailingImg from "../../assets/steel-detailing-services.webp";
 import mechanicalServiceImg from "../../assets/Mechanical-Engineering-Services.jpeg";
 
+// 🎞️ Carousel slides data
 const slides = [
   { image: steelStructureImg, title: "Steel Structure", link: "steel-structure" },
   { image: mechanicalImg, title: "Mechanical", link: "mechanical-industries" },
@@ -24,6 +25,7 @@ const slides = [
   { image: AboutImg, title: "About", link: "about" },
 ];
 
+// ⚙️ Services section data
 const services = [
   {
     title: "Structural Steel Detailing",
@@ -52,107 +54,124 @@ const services = [
 ];
 
 const Home = () => {
+  // 🧭 Slick carousel configuration
   const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 800,
+    dots: false, // No navigation dots
+    infinite: true, // Loop slides infinitely
+    speed: 800, // Transition speed
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1800,
-    fade: true,
-    arrows: true,
-    pauseOnHover: false,
+    autoplay: true, // Auto-slide enabled
+    autoplaySpeed: 2000, // Delay between slides
+    fade: true, // Smooth fade effect
+    arrows: true, // Left/Right arrows visible
+    pauseOnHover: false, // Continue autoplay even when hovered
   };
 
   return (
-    <div>
-      {/* Carousel / Hero Section */}
-      <section id="home" className="relative w-full h-screen overflow-hidden">
-  <Slider {...sliderSettings}>
-    {slides.map((slide, index) => (
-      <div key={index} className="relative w-full h-screen">
-        {/* Image fills entire screen */}
-        <img
-          src={slide.image}
-          alt={slide.title}
-          loading="eager"
-          decoding="async"
-          className="
-            w-full
-            h-screen
-            object-cover
-            transition-transform
-            duration-700
-            ease-in-out
-            hover:scale-105
-            brightness-90
-            contrast-110
-          "
-        />
+    <div className="w-full overflow-hidden">
+      {/* ==============================
+          🏠 HERO SECTION / IMAGE SLIDER
+          ============================== */}
+      <section id="home" className="relative w-full h-[80vh] md:h-screen overflow-hidden">
+        <Slider {...sliderSettings}>
+          {slides.map((slide, index) => (
+            <div key={index} className="relative w-full h-[80vh] md:h-screen">
+              {/* 🌄 Slide Image (full screen, responsive) */}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                loading="eager"
+                decoding="async"
+                className="
+                  w-full
+                  h-[80vh] md:h-screen
+                  object-cover
+                  brightness-90
+                  contrast-110
+                  transition-transform duration-700 ease-in-out
+                  hover:scale-105
+                "
+              />
 
-        {/* Overlay Text */}
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-end text-right pr-12">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-            {slide.title}
-          </h1>
-          <Link
-            to={slide.link}
-            smooth={true}
-            duration={700}
-            offset={-80}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium cursor-pointer transition"
-          >
-            Explore
-          </Link>
-        </div>
-      </div>
-    ))}
-  </Slider>
-</section>
+              {/* 📝 Overlay Text + Explore Button */}
+              <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-end text-right pr-6 md:pr-12">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">
+                  {slide.title}
+                </h1>
+                <Link
+                  to={slide.link}
+                  smooth={true}
+                  duration={700}
+                  offset={-80}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-lg font-medium cursor-pointer transition"
+                >
+                  Explore
+                </Link>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </section>
 
-      {/* Our Services Section */}
-      <section id="our-services" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">OUR SERVICES</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We offer a wide range of professional engineering services tailored to meet your project requirements and ensure excellence in every phase.
+      {/* ==============================
+          ⚙️ OUR SERVICES SECTION
+          ============================== */}
+      <section id="our-services" className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+          {/* 🧱 Section Heading */}
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
+              OUR SERVICES
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+              We offer a wide range of professional engineering services tailored
+              to meet your project requirements and ensure excellence in every phase.
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* 🧩 Responsive Services Grid (1 → 2 → 3 columns) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1"
+                className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-1"
               >
-                <div className="flex flex-col items-center text-center">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-20 h-20 object-contain mb-4"
-                  />
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-                  {service.subTitle && (
-                    <h4 className="text-gray-600 font-medium mb-2">{service.subTitle}</h4>
-                  )}
-                  <p className="text-gray-500 mb-4">{service.description}</p>
-                  <a
-                    href={service.link}
-                    className="text-blue-600 font-semibold hover:text-blue-800 transition"
-                  >
-                    Read More →
-                  </a>
-                </div>
+                {/* 🖼 Service Icon/Image */}
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-20 h-20 object-contain mb-4"
+                />
+
+                {/* 🧾 Service Titles */}
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
+                  {service.title}
+                </h3>
+                {service.subTitle && (
+                  <h4 className="text-gray-600 font-medium mb-2 text-sm md:text-base">
+                    {service.subTitle}
+                  </h4>
+                )}
+
+                {/* 🗒 Description */}
+                <p className="text-gray-500 mb-4 text-sm md:text-base leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* 🔗 "Read More" Link */}
+                <a
+                  href={service.link}
+                  className="text-blue-600 font-semibold hover:text-blue-800 transition text-sm md:text-base"
+                >
+                  Read More →
+                </a>
               </div>
             ))}
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-gray-300 mt-16"></div>
+          {/* 🧭 Divider Line */}
+          <div className="border-t border-gray-300 mt-12 md:mt-16"></div>
         </div>
       </section>
     </div>
