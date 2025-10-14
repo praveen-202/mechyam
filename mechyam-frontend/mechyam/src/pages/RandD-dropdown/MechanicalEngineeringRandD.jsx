@@ -1,10 +1,10 @@
 import React from "react";
 
 
-import brige from "../assets/bridge.jpg";
+import brige from "../../assets/bridge.jpg";
 
 
-const StructuralRAndD = () => (
+const MechnicalEngineeringRandD = () => (
   <>
   <section className="w-full overflow-hidden">
     <div className="relative w-screen flex items-center justify-start -mx-4">
@@ -27,7 +27,7 @@ const StructuralRAndD = () => (
           className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20 w-auto h-auto bg-gray-800 bg-opacity-50 rounded"
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
         >
-          Structural  Detailing R&D
+          Mechanical Engineering R&D
         </h1>
       </div>
     </div>
@@ -39,14 +39,12 @@ const StructuralRAndD = () => (
       <div className="flex flex-col md:flex-row items-start gap-8">
         <div className="w-full md:w-1/2 text-left">
           <h2 className="text-2xl font-bold mb-4 bg-gray-200 p-5 rounded">
-            Structural Detailing R&D
+           Mechanical Engineering R&D
           </h2>
           <p className="text-lg text-gray-800 mb-4">
-           Mechyam has evolved into an eminent organization with enhanced automation support for carrying out manual/mundane activities in day to day modeling/checking/production of shop drawings. To accomplish this we use state-of-the-art Application Programming Interfaces, Plugins using Microsoft.net, C#, DotNet Frameworks, ASP.Net, Java, VBA.
+          At Mechyam, we have a team to work concurrently and provide solutions for R & D with product development. That said, we could provide solutions for Benchmarking new product and development. We have offered services in the domains pertaining to the Food Industry, Rail Domain, General Engineering and Industrial Engineering. With cutting edge software integrated into the PDM/PLM we could offer best solutions related to the product R &D.
           </p>
-          <p className="text-lg text-gray-800 mb-4">
-            Automation team under our R and D department has developed extensive work on various 3D Modeling platforms for Tekla, SDS 2 and AutoCAD. These automations have been used by our Production teams to eliminate repetitive human interventions and day to day mundane work. This has given high returns in the form of Productivity/Accuracy and uniformity of our deliverables for various Sequences/Lots. Stringent Production timelines have been able to accomplish by using these in-house Automation programs.
-          </p>
+          
           
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center">
@@ -66,4 +64,4 @@ const StructuralRAndD = () => (
   </>
       
 );
-export default StructuralRAndD;
+export default MechnicalEngineeringRandD;
