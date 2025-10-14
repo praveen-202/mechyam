@@ -3,6 +3,9 @@ import bridge from "../assets/bridge.jpg";
 
 import hero from "../assets/hero.png";
 import ProjectsImage from "../assets/Projects.jpg";
+import RnD from "../assets/RnD.jpg";
+import MES from "../assets/Mechanical-Engineering-Services.jpeg";
+
 const Projects = () => (
   <main className="w-full overflow-hidden">
     {/* Hero Section */}
@@ -85,7 +88,7 @@ const Projects = () => (
             </h3>
             <div className="relative overflow-hidden rounded-lg shadow-md">
               <img
-                src={hero}
+                src={MES}
                 alt="Mechanical Projects"
                 className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
               />

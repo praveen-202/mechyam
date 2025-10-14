@@ -2,7 +2,7 @@ import React from "react";
 import heroImg from "../../assets/hero.png";
 import steelDetailingImg from "../../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
 
-
+import cad from "../../assets/cad-1.avif";
 
 const ComputerAidedEngineering = () => {
   return (
@@ -11,7 +11,7 @@ const ComputerAidedEngineering = () => {
       <section className="w-full overflow-hidden">
         <div className="relative w-screen flex items-center justify-start -mx-4">
           <img
-            src={steelDetailingImg}
+            src={cad}
             alt="Structural Engineering"
             className="w-full"
             style={{

@@ -1,13 +1,20 @@
 import React from "react";
 import brige from "../../assets/bridge.jpg";
 
+import oilandgas03 from "../../assets/oilandgas03.jpg";
+import oilandgas02 from "../../assets/oilandgas02.jpg";
+import prebid from "../../assets/prebid.jpg";
+import detail from "../../assets/detail.jpg";
+import projectmanagement from "../../assets/projectmanagement.jpg";
+
+
 const OilAndGas = () => (
   <>
     {/* Hero Section */}
     <section className="w-full overflow-hidden">
       <div className="relative w-screen flex items-center justify-start -mx-4">
         <img
-          src={brige}
+          src={oilandgas03}
           className="w-full"
           style={{
             height: "50vh",
@@ -54,7 +61,7 @@ const OilAndGas = () => (
 
           <div className="w-full md:w-1/2 flex items-center justify-center">
             <img
-              src={brige}
+              src={oilandgas02}
               alt="Steel detailing"
               className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
             />
@@ -74,7 +81,7 @@ const OilAndGas = () => (
           {/* Box 1 */}
           <div className="bg-gray-100 shadow-md rounded-md overflow-hidden">
             <img
-              src={brige}
+              src={prebid}
               alt="Pre-bid Engineering Services"
               className="w-full h-56 object-cover"
             />
@@ -92,7 +99,7 @@ const OilAndGas = () => (
           {/* Box 2 */}
           <div className="bg-gray-100 shadow-md rounded-md overflow-hidden">
             <img
-              src={brige}
+              src={detail}
               alt="Detailed Engineering"
               className="w-full h-56 object-cover"
             />
@@ -116,7 +123,7 @@ const OilAndGas = () => (
           {/* Box 3 */}
           <div className="bg-gray-100 shadow-md rounded-md overflow-hidden">
             <img
-              src={brige}
+              src={projectmanagement}
               alt="Project Management"
               className="w-full h-56 object-cover"
             />

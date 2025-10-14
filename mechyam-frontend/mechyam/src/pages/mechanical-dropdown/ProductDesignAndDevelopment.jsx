@@ -2,9 +2,9 @@ import React from "react";
 import heroImg from "../../assets/hero.png";
 import steelDetailingImg from "../../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
 
+import project from "../../assets/project.jpg";
 
-
-
+import projectdesign from "../../assets/projectdesign.jpg";
 const ProductDesignAndDevelopment = () => {
   return (
     <main className="min-h-screen bg-white">
@@ -12,7 +12,7 @@ const ProductDesignAndDevelopment = () => {
       <section className="w-full overflow-hidden">
         <div className="relative w-screen flex items-center justify-start -mx-4">
           <img
-            src={steelDetailingImg}
+            src={projectdesign}
             alt="Structural Engineering"
             className="w-full"
             style={{
@@ -75,7 +75,7 @@ We help you to validate your concept and turn it into real, market-ready product
 
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <img
-                src={steelDetailingImg}
+                src={project}
                 alt="Steel detailing"
                 className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
               />

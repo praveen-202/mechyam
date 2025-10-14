@@ -1,6 +1,7 @@
 import React from "react";
-import heroImg from "../../assets/hero.png";
 
+import embedded from "../../assets/embedded.jpg";
+import embedded01 from "../../assets/embedded01.jpg";
 const EmbeddedDesign = () => {
   return (
     <main className="min-h-screen bg-white">
@@ -8,7 +9,7 @@ const EmbeddedDesign = () => {
       <section className="w-full overflow-hidden">
         <div className="relative w-screen flex items-center justify-start -mx-4">
           <img
-            src={heroImg}
+            src={embedded}
             alt="Embedded Design"
             className="w-full"
             style={{
@@ -81,7 +82,7 @@ const EmbeddedDesign = () => {
             {/* Right Column - Image */}
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <img
-                src={heroImg}
+                src={embedded01}
                 alt="Embedded Hardware"
                 className="w-full h-auto max-h-[450px] object-contain rounded-md shadow-md"
               />

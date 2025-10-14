@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/hero.png";
-import Industries from "../assets/Industries.jpg";
 
-const industries = () => (
+import industries01 from "../assets/industries01.jpg";
+
+const Industries = () => (
   <>
     <section id="steel-structure" className="w-full overflow-hidden">
       <div className="relative w-screen flex items-center justify-start -mx-4">
         <img
-          src={Industries}
+          src={industries01}
           alt="Steel Structure Background"
           className="w-full"
           style={{ height: "50vh", objectFit: "cover" }}
@@ -82,4 +82,4 @@ const industries = () => (
   </>
 );
 
-export default industries;
+export default Industries;
