@@ -103,7 +103,7 @@ const Navbar = () => {
             More ▾
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
               <ul className="py-2">
-                <li><Link to="/admin-login" className="block px-4 py-2 hover:bg-gray-100">Admin Login</Link></li>
+                <li><Link to="/admin-page" className="block px-4 py-2 hover:bg-gray-100">Admin Panel</Link></li>
               </ul>
             </div>
           </li>
