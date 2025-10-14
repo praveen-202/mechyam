@@ -1,7 +1,7 @@
 import React from 'react';
-import steelDetailingImg from "../../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
-import download from '../../assets/download.jpeg'; 
+
 import steel from '../../assets/steel.jpg';
+import SDS from '../../assets/steel-detailing-services.webp';
 
 
 const StructuralSteelDetailingServices = () => (
@@ -51,7 +51,7 @@ const StructuralSteelDetailingServices = () => (
           {/* Right Image Section */}
           <div className="w-full md:w-1/2 flex items-center justify-center">
             <img
-              src={steelDetailingImg}
+              src={SDS}
               alt="Steel detailing"
               className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
             />

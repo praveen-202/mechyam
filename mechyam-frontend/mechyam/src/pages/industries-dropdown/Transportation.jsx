@@ -1,5 +1,6 @@
 import React from "react";
 import brige from "../../assets/bridge.jpg"; 
+import rail from "../../assets/rail.jpg";
 
 
 
@@ -8,7 +9,7 @@ const Transportation = () => (
   <section className="w-full overflow-hidden">
     <div className="relative w-screen flex items-center justify-start -mx-4">
       <img
-        src={brige}
+        src={rail}
         alt="Steel Structure Background"
         className="w-full"
         style={{
