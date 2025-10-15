@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // 🖼 Importing all images used in the page
-import AboutImg from "../../assets/About.jpg";
-import industriesImg from "../../assets/Industries.jpg";
-import projectsImg from "../../assets/Projects.jpg";
-import steelStructureImg from "../../assets/Steel Structure.jpg";
-import mechanicalImg from "../../assets/Mechanical.jpg";
-import rndImg from "../../assets/RnD.jpg";
+import AboutImg from "../../assets/carousel-images/AboutUs.jpg";
+import industriesImg from "../../assets/carousel-images/Industries.jpg";
+import projectsImg from "../../assets/carousel-images/projects.jpg";
+import steelStructureImg from "../../assets/carousel-images/steelstructure.jpg";
+import mechanicalImg from "../../assets/carousel-images/Mechanical.jpg";
+import rndImg from "../../assets/carousel-images/RnD.jpg";
 import structuralImg from "../../assets/structural-steel-detailing.jpeg";
 import steelDetailingImg from "../../assets/steel-detailing-services.webp";
 import mechanicalServiceImg from "../../assets/Mechanical-Engineering-Services.jpeg";
@@ -22,7 +22,7 @@ const slides = [
   { image: rndImg, title: "R&D", link: "research-development" },
   { image: projectsImg, title: "Projects", link: "projects" },
   { image: industriesImg, title: "Industries", link: "mechanical-industries" },
-  { image: AboutImg, title: "About", link: "about" },
+  { image: AboutImg, title: "About Us", link: "about" },
 ];
 
 // ⚙️ Services section data

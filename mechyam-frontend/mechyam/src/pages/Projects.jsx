@@ -1,13 +1,10 @@
 import React from "react";
-import bridge from "../assets/bridge.jpg";
 
-import hero from "../assets/hero.png";
-import ProjectsImage from "../assets/Projects.jpg";
-import RnD from "../assets/RnD.jpg";
+import bridge from "../assets/bridge.jpg";
 import MES from "../assets/Mechanical-Engineering-Services.jpeg";
 import mechproj from "../assets/mechproj.jpg";
 import structproj from "../assets/structproj.jpg";
-import SteelStructure from "../assets/Steel Structure.jpg";
+
 
 const Projects = () => (
   <main className="w-full overflow-hidden">

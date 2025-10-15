@@ -1,5 +1,5 @@
 import React from "react";
-import brige from "../assets/bridge.jpg"; 
+
  import mechanical from "../assets/mechanical.jpg";
 import mech01 from "../assets/mech01.jpg";
 
