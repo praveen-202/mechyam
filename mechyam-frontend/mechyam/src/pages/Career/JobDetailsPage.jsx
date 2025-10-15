@@ -47,7 +47,7 @@ const JobDetailsPage = () => {
     }
 
     try {
-      await axios.post("http://192.168.1.191:8080/mechyam/api/career/apply", form, {
+      await axios.post("http://localhost:8085/mechyam/api/career/apply", form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

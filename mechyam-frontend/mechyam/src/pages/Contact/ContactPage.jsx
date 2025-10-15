@@ -57,7 +57,7 @@ const ContactPage = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8081/mechyam/api/contact/submit',
+        'http://localhost:8085/mechyam/api/contact/submit',
         formData
       );
       alert('Form submitted successfully!');
