@@ -1,5 +1,6 @@
 import React from "react";
-import brige from "../../assets/bridge.jpg";
+
+
 import testimonials from "../../assets/testimonials.jpg";
 
 const Testimonials = () => (
