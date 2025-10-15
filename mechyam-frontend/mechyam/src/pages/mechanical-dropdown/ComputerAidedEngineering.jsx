@@ -1,8 +1,7 @@
 import React from "react";
-import heroImg from "../../assets/hero.png";
-import steelDetailingImg from "../../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
 
 import cad from "../../assets/cad-1.avif";
+import cad01 from "../../assets/cad01.jpg";
 
 const ComputerAidedEngineering = () => {
   return (
@@ -51,7 +50,7 @@ const ComputerAidedEngineering = () => {
 
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <img
-                src={steelDetailingImg}
+                src={cad01}
                 alt="Steel detailing"
                 className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
               />

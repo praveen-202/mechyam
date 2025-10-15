@@ -3,6 +3,7 @@ import React from "react";
 import heroImg from "../../assets/hero.png";
 import steelDetailingImg from "../../assets/StructuralSteelImages/structural-steel-detailing.jpeg";
 import brige from "../../assets/bridge.jpg";
+import bridge01 from "../../assets/bridge01.jpg";
 
 
 const BridgeDetailingServices = () => (
@@ -36,7 +37,7 @@ const BridgeDetailingServices = () => (
             </p>
           </div>
           <div className="w-full md:w-1/2 flex items-center justify-center">
-                <img src={steelDetailingImg} alt="Steel detailing" className="w-full h-auto max-h-96 object-contain rounded-md shadow-md" />
+                <img src={bridge01} alt="Steel detailing" className="w-full h-auto max-h-96 object-contain rounded-md shadow-md" />
           </div>
         </div>
       </div>
