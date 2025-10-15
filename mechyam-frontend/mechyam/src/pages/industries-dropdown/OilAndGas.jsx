@@ -1,5 +1,5 @@
 import React from "react";
-import brige from "../../assets/bridge.jpg";
+
 
 import oilandgas03 from "../../assets/oilandgas03.jpg";
 import oilandgas02 from "../../assets/oilandgas02.jpg";
