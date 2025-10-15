@@ -2,6 +2,9 @@ import React from "react";
 
 
 import brige from "../../assets/bridge.jpg";
+import structRandD from "../../assets/structRandD.jpg";
+import structRandD02 from "../../assets/structRandD02.jpg";
+
 
 
 const StructuralRAndD = () => (
@@ -9,7 +12,7 @@ const StructuralRAndD = () => (
   <section className="w-full overflow-hidden">
     <div className="relative w-screen flex items-center justify-start -mx-4">
       <img
-        src={brige}
+        src={structRandD}
         alt="Steel Structure Background"
         className="w-full"
         style={{
@@ -51,7 +54,7 @@ const StructuralRAndD = () => (
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
-            src={brige}
+            src={structRandD02}
             alt="Steel detailing"
             className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
           />

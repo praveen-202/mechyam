@@ -5,36 +5,44 @@ import hero from "../assets/hero.png";
 import ProjectsImage from "../assets/Projects.jpg";
 import RnD from "../assets/RnD.jpg";
 import MES from "../assets/Mechanical-Engineering-Services.jpeg";
+import mechproj from "../assets/mechproj.jpg";
+import structproj from "../assets/structproj.jpg";
+import SteelStructure from "../assets/Steel Structure.jpg";
 
 const Projects = () => (
   <main className="w-full overflow-hidden">
     {/* Hero Section */}
     <section>
-      <div className="relative w-screen flex items-center justify-start -mx-4">
-        <img
-          src={ProjectsImage}
-          alt="Projects Background"
-          className="w-full"
-          style={{
-            height: "50vh",
-            width: "100vw",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
-        <div
-          className="absolute left-0 top-1/3 z-10 ml-8"
-          style={{ maxWidth: "50vw" }}
-        >
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20 w-auto h-auto bg-gray-800 bg-opacity-50 rounded"
-            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
-          >
-            Projects
-          </h1>
-        </div>
-      </div>
-    </section>
+  <div className="relative w-screen flex items-center justify-start -mx-4">
+    {/* Two images side by side */}
+    <div className="flex w-full">
+      <img
+        src={structproj} // first image here
+        alt="Projects Left"
+        className="w-1/2 h-[50vh] object-cover object-center"
+      />
+      <img
+        src={mechproj} // second image here
+        alt="Projects Right"
+        className="w-1/2 h-[50vh] object-cover object-center"
+      />
+    </div>
+
+    {/* Text overlay */}
+    <div
+      className="absolute left-0 top-1/3 z-10 ml-8"
+      style={{ maxWidth: "50vw" }}
+    >
+      <h1
+        className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-2 text-left px-20 w-auto h-auto bg-gray-800 bg-opacity-50 rounded"
+        style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
+      >
+        Projects
+      </h1>
+    </div>
+  </div>
+</section>
+
 
     {/* Projects Overview */}
     <section className="w-full bg-white py-12">

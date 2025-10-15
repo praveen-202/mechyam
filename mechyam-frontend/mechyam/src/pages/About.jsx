@@ -1,5 +1,7 @@
 import React from "react";
-import brige from "../assets/bridge.jpg"; 
+
+import aboutus from "../assets/aboutus.jpg";
+import aboutus02 from "../assets/aboutus02.svg";
 
 
 
@@ -8,7 +10,7 @@ const About = () => (
   <section className="w-full overflow-hidden">
     <div className="relative w-screen flex items-center justify-start -mx-4">
       <img
-        src={brige}
+        src={aboutus}
         alt="Steel Structure Background"
         className="w-full"
         style={{
@@ -44,13 +46,13 @@ const About = () => (
           Mechyam Technical Services is a leading engineering services provider since 2004. We cover several areas of structural, mechanical and design services for a variety of industrial and commercial requirements.​​
           </p>
           <p className="text-lg text-gray-800 mb-4 ">
-            With the state-of-the-art facility and skilled In-house staff, we support customers across the globe DGS offers cost effective, competitive and customized solutions to meet specific requirements of our clients. We engage in different model of outsourcing, whether it is On-site or Offshore model, it will help our client’s business grow and they can focus more on their core strength.
+            With the state-of-the-art facility and skilled In-house staff, we support customers across the globe Mechyam offers cost effective, competitive and customized solutions to meet specific requirements of our clients. We engage in different model of outsourcing, whether it is On-site or Offshore model, it will help our client’s business grow and they can focus more on their core strength.
           </p>
           <p className="text-lg text-gray-800 mb-4">Our success is based on the commitment we give to our clients by continuous improvement in the quality of deliverables, consistency in work quality and updating our knowledge of the state-of-the-art technology even in the time of rising costs – competitive pricing structure.</p>
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
-            src={brige}
+            src={aboutus02}
             alt="Steel detailing"
             className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
           />
