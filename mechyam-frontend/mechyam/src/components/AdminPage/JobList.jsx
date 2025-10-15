@@ -1,40 +1,17 @@
-// src/components/AdminPage/JobList.jsx
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchJobs } from "../../redux/slices/JobSlice";
 
 const JobList = () => {
-  const [jobs, setJobs] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
+  const { data: jobs, loading, error } = useSelector((state) => state.jobs);
 
   useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        const response = await axios.get(
-          "http://192.168.1.191:8085/mechyam/api/career/jobs"
-        );
+    dispatch(fetchJobs());
+  }, [dispatch]);
 
-        // Log response to check structure
-        console.log("Job API response:", response.data);
-
-        // Ensure jobs is always an array
-        const jobsArray = Array.isArray(response.data)
-          ? response.data
-          : response.data.data || [];
-        setJobs(jobsArray);
-      } catch (error) {
-        console.error("❌ Error fetching jobs:", error);
-        setJobs([]); // fallback
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchJobs();
-  }, []);
-
-  if (loading) {
-    return <p className="text-gray-500 text-center mt-4">Loading jobs...</p>;
-  }
+  if (loading) return <p className="text-gray-500 text-center mt-4">Loading jobs...</p>;
+  if (error) return <p className="text-red-500 text-center mt-4">{error}</p>;
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-md h-[85vh] overflow-y-auto">
@@ -44,10 +21,7 @@ const JobList = () => {
       ) : (
         <ul className="space-y-3">
           {jobs.map((job, index) => (
-            <li
-              key={index}
-              className="border p-3 rounded-lg hover:bg-gray-50 transition"
-            >
+            <li key={index} className="border p-3 rounded-lg hover:bg-gray-50 transition">
               <h3 className="font-semibold text-lg">{job.jobTitle}</h3>
               <p className="text-gray-600">Department: {job.department}</p>
               <p className="text-gray-600">Location: {job.location}</p>
