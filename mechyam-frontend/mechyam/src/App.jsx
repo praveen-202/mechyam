@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import StructuralSteel from "./pages/StructuralSteel";
 import Mechanical from "./pages/Mechanical";
@@ -8,15 +8,9 @@ import MechanicalEngineeringRandD from "./pages/RandD-dropdown/MechanicalEnginee
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import ContactPage from "./pages/Contact/ContactPage";
-// import CareerPage from "./pages/Career/CareerPage";
-// import JobDetailsPage from "./pages/Career/JobDetailsPage";
-
 import CareerPage from "./pages/Career/CareerPage.jsx";
 import JobDetailsPage from "./pages/Career/JobDetailsPage.jsx";
 import Home from "./pages/Home/Home.jsx";
-
-
-
 import StructuralEngineering from "./pages/structural-steel-dropdown/StructuralEngineering";
 import StructuralSteelDetailingServices from "./pages/structural-steel-dropdown/StructuralSteelDetailingServices";
 import BridgeDetailingServices from "./pages/structural-steel-dropdown/BridgeDetailingServices";
@@ -29,14 +23,26 @@ import OilAndGas from "./pages/industries-dropdown/OilAndGas";
 import Transportation from "./pages/industries-dropdown/Transportation";
 import Company from "./pages/about-dropdown/Company";
 import Testimonials from "./pages/about-dropdown/Testimonials";
-// import AdminLogin from "./components/AdminPage/AdminLogin";
 import AdminPage from "./components/AdminPage/AdminPage";
 import Footer from "./pages/Footer.jsx";
 
+// ✅ ScrollToTop Component (inside App for simplicity)
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to top when route changes
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
   return (
     <>
+      {/* 👇 Automatically scrolls to top when route changes */}
+      <ScrollToTop />
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -58,14 +64,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/company" element={<Company />} />
         <Route path="/testimonials" element={<Testimonials />} />
-        {/* <Route path="/admin-login" element={<AdminLogin />} /> */}
         <Route path="/admin-page" element={<AdminPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/careers" element={<CareerPage />} />
         <Route path="/career/:id" element={<JobDetailsPage />} />
-
-
-
         <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
       <Footer />
