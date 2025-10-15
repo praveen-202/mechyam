@@ -1,6 +1,7 @@
 import React from "react";
 import brige from "../../assets/bridge.jpg"; 
 import rail from "../../assets/rail.jpg";
+import rail01 from "../../assets/rail01.jpg";
 
 
 
@@ -51,7 +52,7 @@ const Transportation = () => (
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
-            src={brige}
+            src={rail01}
             alt="Steel detailing"
             className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
           />

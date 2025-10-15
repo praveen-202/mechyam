@@ -3,7 +3,7 @@ import React from "react";
 
 import structuralengineering from "../../assets/StructuralEngineeringServicesImages/structuralengineering.jpg";
 
-
+import ses from "../../assets/StructuralEngineeringServicesImages/ses.jpg";
 
 
 
@@ -62,13 +62,14 @@ const StructuralEngineering = () => {
               </p>
             </div>
 
-            <div className="w-full md:w-1/2 flex items-center justify-center">
+           <div className="w-full md:w-1/2 flex items-center justify-center">
               <img
-                src={structuralengineering}
-                alt="Steel detailing"
-                className="w-full h-auto max-h-96 object-contain rounded-md shadow-md"
+                  src={ses}
+                  alt="Steel detailing"
+                  className="w-full max-w-[350px]  object-contain rounded-md shadow-md"
               />
             </div>
+
           </div>
         </div>
       </section>
