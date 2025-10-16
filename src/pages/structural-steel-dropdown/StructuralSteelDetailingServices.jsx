@@ -2,6 +2,7 @@ import React from 'react';
 
 import steel from '../../assets/steel.jpg';
 import SDS from '../../assets/steel-detailing-services.webp';
+import sds from '../../assets/steeldetailingservices.jpg';
 
 
 const StructuralSteelDetailingServices = () => (
@@ -10,7 +11,7 @@ const StructuralSteelDetailingServices = () => (
     <section className="w-full overflow-hidden">
       <div className="relative w-screen flex items-center justify-start -mx-4">
         <img
-          src={steel}
+          src={sds}
           alt="Structural Engineering"
           className="w-full"
           style={{
