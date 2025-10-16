@@ -58,29 +58,14 @@ const Footer = () => {
 
             {/* Global HQ */}
             <div className="mb-6 text-sm leading-6">
-              <p className="font-semibold text-gray-300">GLOBAL HEADQUARTER</p>
-              <p className="text-gray-400">Mechyam Technical Services Inc.</p>
-              <p className="text-gray-400">1875 Big Timber Road Suite A</p>
-              <p className="text-gray-400">Elgin, IL 60123</p>
-              <p className="text-gray-400">Tel. (630)539-8200 Extn.5204</p>
-              <p className="text-gray-400">Fax. (630)582-3700</p>
-              <p className="text-gray-400">E-mail: sales@mechyam.com</p>
+              <p className="font-semibold text-gray-300">Corporate Office (India) </p>
+              <p className="text-gray-300">Mechyam Technical Services Inc.</p>
+              <p  className="text-gray-400">Plot No.97-E EP Mahalaxmi puram, Narapally, Ghatkesar Manadal, Medchal-Malkajgiri Dist Telangana-500088</p>
+              <p  className="text-gray-400">Contact : +91 79816 70612</p>
             </div>
 
             {/* India Office */}
-            <div className="text-sm leading-6">
-              <p className="font-semibold text-gray-300">CORPORATE OFFICE (INDIA)</p>
-              <p className="text-gray-400">Mechyam Technical Services Pvt. Ltd.</p>
-              <p className="text-gray-400">
-                #8-2-700/A, 3rd Floor, Shiv Shakthi Towers,
-              </p>
-              <p className="text-gray-400">
-                Road No.12, Banjara Hills, Hyderabad – 500034
-              </p>
-              <p className="text-gray-400">Tel. (630)539-8200 Extn.5204</p>
-              <p className="text-gray-400">Fax. (630)582-3700</p>
-              <p className="text-gray-400">E-mail: sales@mechyam.com</p>
-            </div>
+            
           </div>
 
           {/* RIGHT SECTION - SERVICES */}
