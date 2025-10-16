@@ -33,7 +33,7 @@ const services = [
     description:
       "We provide precise structural steel detailing to ensure accurate fabrication and seamless construction management.",
     image: structuralImg,
-    link: "#",
+    link: "/structural-engineering",
   },
   {
     title: "Steel Detailing Services",
@@ -41,7 +41,7 @@ const services = [
     description:
       "Our steel detailing services offer comprehensive solutions for structural projects, ensuring high accuracy and quality.",
     image: steelDetailingImg,
-    link: "#",
+    link: "/structuralsteeldetailingservices",
   },
   {
     title: "Mechanical Engineering",
@@ -49,7 +49,7 @@ const services = [
     description:
       "Our mechanical engineering solutions cover design, analysis, and optimization of machinery and systems for efficiency and reliability.",
     image: mechanicalServiceImg,
-    link: "#",
+    link: "/mechanical",
   },
 ];
 
