@@ -25,6 +25,7 @@ import Company from "./pages/about-dropdown/Company";
 import Testimonials from "./pages/about-dropdown/Testimonials";
 import AdminPage from "./components/AdminPage/AdminPage";
 import Footer from "./pages/Footer.jsx";
+import DetailedJobList from "./pages/DetailedJobList";
 
 // ✅ ScrollToTop Component (inside App for simplicity)
 const ScrollToTop = () => {
@@ -68,6 +69,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/careers" element={<CareerPage />} />
         <Route path="/career/:id" element={<JobDetailsPage />} />
+        <Route path="/jobs/:id" element={<DetailedJobList />} />
+
         <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
       <Footer />
