@@ -219,7 +219,11 @@ const services = [
     description:
       "We provide precise structural steel detailing to ensure accurate fabrication and seamless construction management.",
     image: structuralImg,
+<<<<<<< HEAD
+    link: "/structural-engineering",
+=======
     link: "/steel-structure",
+>>>>>>> origin/praveen-frontend
   },
   {
     title: "Steel Detailing Services",
@@ -227,7 +231,11 @@ const services = [
     description:
       "Our steel detailing services offer comprehensive solutions for structural projects, ensuring high accuracy and quality.",
     image: steelDetailingImg,
+<<<<<<< HEAD
+    link: "/structuralsteeldetailingservices",
+=======
     link: "/steel-detailing",
+>>>>>>> origin/praveen-frontend
   },
   {
     title: "Mechanical Engineering",
