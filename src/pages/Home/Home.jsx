@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom"; // ✅ Changed from react-scroll to react-router-dom
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -18,12 +18,12 @@ import chess from "../../assets/chess.jpg";
 
 // 🎞️ Carousel slides data
 const slides = [
-  { image: steelStructureImg, title: "Steel Structure", link: "steel-structure" },
-  { image: mechanicalImg, title: "Mechanical", link: "mechanical-industries" },
-  { image: rndImg, title: "R&D", link: "research-development" },
-  { image: projectsImg, title: "Projects", link: "projects" },
-  { image: industriesImg, title: "Industries", link: "mechanical-industries" },
-  { image: AboutImg, title: "About Us", link: "about" },
+  { image: steelStructureImg, title: "Structural Steel", link: "/steel-structure" },
+  { image: mechanicalImg, title: "Mechanical", link: "/mechanical" },
+  { image: rndImg, title: "R&D", link: "/research-development" },
+  { image: projectsImg, title: "Projects", link: "/projects" },
+  { image: industriesImg, title: "Industries", link: "/industries" },
+  { image: AboutImg, title: "About Us", link: "/about" },
 ];
 
 // ⚙️ Services section data
@@ -57,16 +57,16 @@ const services = [
 const Home = () => {
   // 🧭 Slick carousel configuration
   const sliderSettings = {
-    dots: false, // No navigation dots
-    infinite: true, // Loop slides infinitely
-    speed: 800, // Transition speed
+    dots: false,
+    infinite: true,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Auto-slide enabled
-    autoplaySpeed: 2000, // Delay between slides
-    fade: true, // Smooth fade effect
-    arrows: true, // Left/Right arrows visible
-    pauseOnHover: false, // Continue autoplay even when hovered
+    autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true,
+    arrows: true,
+    pauseOnHover: false,
   };
 
   return (
@@ -78,7 +78,6 @@ const Home = () => {
         <Slider {...sliderSettings}>
           {slides.map((slide, index) => (
             <div key={index} className="relative w-full h-[80vh] md:h-screen">
-              {/* 🌄 Slide Image (full screen, responsive) */}
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -100,11 +99,9 @@ const Home = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">
                   {slide.title}
                 </h1>
+                {/* ✅ Updated Explore Button (uses react-router-dom Link) */}
                 <Link
                   to={slide.link}
-                  smooth={true}
-                  duration={700}
-                  offset={-80}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-lg font-medium cursor-pointer transition"
                 >
                   Explore
@@ -120,7 +117,6 @@ const Home = () => {
           ============================== */}
       <section id="our-services" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-          {/* 🧱 Section Heading */}
           <div className="text-center mb-10 md:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               OUR SERVICES
@@ -131,21 +127,17 @@ const Home = () => {
             </p>
           </div>
 
-          {/* 🧩 Responsive Services Grid (1 → 2 → 3 columns) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-1"
               >
-                {/* 🖼 Service Icon/Image */}
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-20 h-20 object-contain mb-4"
                 />
-
-                {/* 🧾 Service Titles */}
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
                   {service.title}
                 </h3>
@@ -154,72 +146,61 @@ const Home = () => {
                     {service.subTitle}
                   </h4>
                 )}
-
-                {/* 🗒 Description */}
                 <p className="text-gray-500 mb-4 text-sm md:text-base leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* 🔗 "Read More" Link */}
-                <a
-                  href={service.link}
+                <Link
+                  to={service.link}
                   className="text-blue-600 font-semibold hover:text-blue-800 transition text-sm md:text-base"
                 >
                   Read More →
-                </a>
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* 🧭 Divider Line */}
           <div className="border-t border-gray-300 mt-12 md:mt-16"></div>
         </div>
       </section>
 
       {/* ==============================
-    🌟 OUR VISION & MISSION SECTION
-    ============================== */}
-<section id="vision-mission" className="bg-blue-900 text-white py-20">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-    
-    {/* ♟️ Left Side Image */}
-    <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
-      <img
-        src={chess}
-        alt="Vision & Mission"
-        className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
-      />
-    </div>
+          🌟 OUR VISION & MISSION SECTION
+          ============================== */}
+      <section id="vision-mission" className="bg-blue-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+            <img
+              src={chess}
+              alt="Vision & Mission"
+              className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
+            />
+          </div>
 
-    {/* 📝 Right Side Text */}
-    <div className="w-full md:w-1/2">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
-        OUR VISION & MISSION
-      </h2>
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
+              OUR VISION & MISSION
+            </h2>
 
-      {/* Vision */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-semibold mb-2">Vision</h3>
-        <p className="text-lg leading-relaxed">
-          To deliver high-quality engineering solutions within the time schedule every time, 
-          by exceeding customer expectations through an organizational culture that encourages 
-          continuous improvement and results in repeat business.
-        </p>
-      </div>
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-2">Vision</h3>
+              <p className="text-lg leading-relaxed">
+                To deliver high-quality engineering solutions within the time schedule every time, 
+                by exceeding customer expectations through an organizational culture that encourages 
+                continuous improvement and results in repeat business.
+              </p>
+            </div>
 
-      {/* Mission */}
-      <div>
-        <h3 className="text-2xl font-semibold mb-2">Mission</h3>
-        <p className="text-lg leading-relaxed">
-          To evolve as a market leader by sustained delivery of world-class engineering services, 
-          with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
-          for progressive growth to leverage value to all stakeholders.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Mission</h3>
+              <p className="text-lg leading-relaxed">
+                To evolve as a market leader by sustained delivery of world-class engineering services, 
+                with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
+                for progressive growth to leverage value to all stakeholders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
