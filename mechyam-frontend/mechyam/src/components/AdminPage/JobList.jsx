@@ -167,7 +167,7 @@ const JobList = () => {
     const fetchJobs = async () => {
       try {
         const response = await axios.get(
-          "http://192.168.1.191:8085/mechyam/api/career/jobs/all"
+          "http://localhost:8080/mechyam/api/career/jobs/all"
         );
 
         const jobsArray =

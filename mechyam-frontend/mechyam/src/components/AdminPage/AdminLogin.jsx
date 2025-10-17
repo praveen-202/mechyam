@@ -3,19 +3,15 @@ import React, { useState } from "react";
 import OTPModal from "./OTPModal";
 
 const AdminLogin = ({ onVerified }) => {
-  // State for email and password inputs
   const [formData, setFormData] = useState({ email: "", password: "" });
-  // State for error messages
   const [error, setError] = useState("");
-  // State to control showing OTP modal
   const [showOTP, setShowOTP] = useState(false);
+  const [isClicked, setIsClicked] = useState(false); // ✅ new state for click animation
 
-  // Update form data when inputs change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Verify email and password before showing OTP
   const handleVerify = (e) => {
     e.preventDefault();
     setError("");
@@ -29,6 +25,10 @@ const AdminLogin = ({ onVerified }) => {
       setError("Invalid credentials");
       return;
     }
+
+    // ✅ Button click animation
+    setIsClicked(true);
+    setTimeout(() => setIsClicked(false), 200);
 
     // Show OTP modal
     setShowOTP(true);
@@ -69,20 +69,25 @@ const AdminLogin = ({ onVerified }) => {
 
           {error && <p className="text-red-600 text-sm text-center">{error}</p>}
 
+          {/* ✅ Animated Button */}
           <button
             type="submit"
-            className="w-full bg-blue-900 text-white py-2 rounded-lg font-semibold hover:bg-blue-800 transition"
+            onMouseDown={() => setIsClicked(true)}
+            onMouseUp={() => setIsClicked(false)}
+            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold transition-all duration-150 ${
+              isClicked ? "scale-95 bg-blue-800" : "hover:bg-blue-800"
+            }`}
           >
-            Verify
+            Verify via OTP
           </button>
         </form>
 
-        {/* OTP Modal: show only if credentials are correct */}
+        {/* OTP Modal */}
         {showOTP && (
           <OTPModal
             email={formData.email}
-            onVerified={onVerified} // Callback when OTP verified
-            onClose={() => setShowOTP(false)} // Close OTP modal if user clicks outside
+            onVerified={onVerified}
+            onClose={() => setShowOTP(false)}
           />
         )}
       </div>

@@ -126,11 +126,11 @@ const AdminDashboard = () => {
 
   return (
     <div className="relative min-h-screen bg-gray-100 p-6">
-      {/* Top Navigation */}
+      {/* ==============================
+           🔹 Top Navigation Bar
+         ============================== */}
       <header className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-blue-900">Admin Dashboard</h1>
-
-        {/* Burger Menu */}
+        {/* 🍔 Burger Menu (Left Side) */}
         <div className="relative">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -139,9 +139,9 @@ const AdminDashboard = () => {
             <Menu size={28} className="text-blue-900" />
           </button>
 
-          {/* Dropdown Menu */}
+          {/* 📋 Dropdown Menu */}
           {menuOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+            <div className="absolute left-0 mt-2 w-52 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
               {["JobList", "JobForm", "AppliedJobs", "ContactDetails"].map(
                 (item) => (
                   <button
@@ -164,12 +164,18 @@ const AdminDashboard = () => {
             </div>
           )}
         </div>
+
+        {/* 🏷️ Heading (Right Side) */}
+        <h1 className="text-2xl font-bold text-blue-900">Admin Dashboard</h1>
       </header>
 
-      {/* Main Content */}
+      {/* ==============================
+           🔹 Main Content Area
+         ============================== */}
       <main className="bg-white rounded-xl shadow-md p-6">{renderContent()}</main>
     </div>
   );
 };
 
 export default AdminDashboard;
+

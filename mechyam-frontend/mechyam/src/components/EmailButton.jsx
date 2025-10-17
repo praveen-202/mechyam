@@ -8,7 +8,7 @@ const EmailButton = () => {
 
   return (
     <div onClick={handleEmailClick}>
-      <Button text="Email" bgColor="bg-blue-500" />
+      <Button text="Email" bgColor="bg-blue-600" />
     </div>
   );
 };
