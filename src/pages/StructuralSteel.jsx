@@ -44,7 +44,7 @@ const SteelStructure = () => (
               Steel Detailing services from Mechyam use the state of the art
               technical tools and solutions. Our services are tailored to our
               customers needs in an efficient and transparent manner. Majority
-              of our offerings are CAD based with 3D Modeling. DGS believes in
+              of our offerings are CAD based with 3D Modeling. Mechyam believes in
               using right technology tools with skilled personnel to deliver
               optimum solutions to customers in a closed loop style. Our Steel
               Detailing services help our clients to simplify project
