@@ -11,9 +11,9 @@ const ContactButton = () => {
 
   return (
     <div onClick={handleClick}>
-      <Button text="Contact" bgColor="bg-green-600" />
+      <Button text="Contact" bgColor="bg-blue-600" />
     </div>
   );
 };
 
-export default ContactButton;
+export default ContactButton;
