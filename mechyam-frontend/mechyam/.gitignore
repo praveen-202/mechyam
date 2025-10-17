@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+/.metadata/
+>>>>>>> 6984b14530b2c3f7297d569a8445a4e48ebe6395
