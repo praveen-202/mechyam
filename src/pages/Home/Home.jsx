@@ -202,7 +202,7 @@ const Home = () => {
         </div>
       </section>
     🌟 OUR VISION & MISSION SECTION
-    ============================== */}
+    ============================== */
 <section id="vision-mission" className="bg-blue-900 text-white py-20">
   <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
     
