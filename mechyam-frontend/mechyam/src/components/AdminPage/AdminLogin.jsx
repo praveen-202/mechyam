@@ -21,7 +21,7 @@ const AdminLogin = ({ onVerified }) => {
       return;
     }
 
-    if (formData.email !== "a@a.com" || formData.password !== "a123") {
+    if (formData.email !== "admin@mechyam.com" || formData.password !== "admin123") {
       setError("Invalid credentials");
       return;
     }
@@ -74,9 +74,8 @@ const AdminLogin = ({ onVerified }) => {
             type="submit"
             onMouseDown={() => setIsClicked(true)}
             onMouseUp={() => setIsClicked(false)}
-            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold transition-all duration-150 ${
-              isClicked ? "scale-95 bg-blue-800" : "hover:bg-blue-800"
-            }`}
+            className={`w-full bg-blue-900 text-white py-2 rounded-lg font-semibold transition-all duration-150 ${isClicked ? "scale-95 bg-blue-800" : "hover:bg-blue-800"
+              }`}
           >
             Verify via OTP
           </button>
