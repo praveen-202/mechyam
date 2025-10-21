@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/Mechyam.jpg"; // replace with your logo path
+import MADS from "../assets/MADS-Logo.jpg";
 
 const Footer = () => {
   const services = {
@@ -50,7 +51,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             {/* Logo */}
             <div className="flex items-center mb-8">
-              <img src={logo} alt="Mechyam Logo" className="w-16 h-auto mr-3" />
+              <img src={MADS} alt="Mechyam Logo" className="w-16 h-auto mr-3" />
               <h1 className="text-3xl font-bold text-blue-700">MECHYAM</h1>
             </div>
 

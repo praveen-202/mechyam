@@ -5,6 +5,7 @@ import EmailButton from "./EmailButton";
 import CareerButton from "./CareerButton";
 import { Menu, X } from "lucide-react"; // install lucide-react for icons
 import logo from "../assets/Mechyam.jpg";
+import MADS from "../assets/MADS-Logo.jpg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
         {/* Left: Logo + Company Name */}
         <div className="flex items-center space-x-3">
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            <img src={logo} alt="Mechyam Logo" className="h-16 w-16" />
+            <img src={MADS} alt="Mechyam Logo" className="h-16 w-16" />
           </Link>
           <span className="text-2xl font-bold text-blue-900">Mechyam</span>
         </div>
