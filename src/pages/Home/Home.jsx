@@ -201,6 +201,49 @@ const Home = () => {
           </div>
         </div>
       </section>
+    🌟 OUR VISION & MISSION SECTION
+    ============================== */}
+<section id="vision-mission" className="bg-blue-900 text-white py-20">
+  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    
+    {/* ♟️ Left Side Image */}
+    <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+      <img
+        src={chess}
+        alt="Vision & Mission"
+        className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
+      />
+    </div>
+
+    {/* 📝 Right Side Text */}
+    <div className="w-full md:w-1/2">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
+        OUR VISION & MISSION
+      </h2>
+
+      {/* Vision */}
+      <div className="mb-6">
+        <h3 className="text-2xl font-semibold mb-2">Vision</h3>
+        <p className="text-lg leading-relaxed">
+          To deliver high-quality engineering solutions within the time schedule every time, 
+          by exceeding customer expectations through an organizational culture that encourages 
+          continuous improvement and results in repeat business.
+        </p>
+      </div>
+
+      {/* Mission */}
+      <div>
+        <h3 className="text-2xl font-semibold mb-2">Mission</h3>
+        <p className="text-lg leading-relaxed">
+          To evolve as a market leader by sustained delivery of world-class engineering services, 
+          with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
+          for progressive growth to leverage value to all stakeholders.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
