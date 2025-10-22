@@ -4,7 +4,7 @@ import ContactButton from "./ContactButton";
 import EmailButton from "./EmailButton";
 import CareerButton from "./CareerButton";
 import { Menu, X } from "lucide-react"; // install lucide-react for icons
-import logo from "../assets/Mechyam.jpg";
+import logo from "../assets/MADS01.jpg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

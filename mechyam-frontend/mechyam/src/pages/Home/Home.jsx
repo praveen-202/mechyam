@@ -1,6 +1,7 @@
+
 // import React from "react";
 // import Slider from "react-slick";
-// import { Link } from "react-scroll";
+// import { Link as RouterLink } from "react-router-dom"; // ✅ For navigation
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
@@ -14,15 +15,16 @@
 // import structuralImg from "../../assets/structural-steel-detailing.jpeg";
 // import steelDetailingImg from "../../assets/steel-detailing-services.webp";
 // import mechanicalServiceImg from "../../assets/Mechanical-Engineering-Services.jpeg";
+// import chess from "../../assets/chess.jpg";
 
 // // 🎞️ Carousel slides data
 // const slides = [
-//   { image: steelStructureImg, title: "Steel Structure", link: "steel-structure" },
-//   { image: mechanicalImg, title: "Mechanical", link: "mechanical-industries" },
-//   { image: rndImg, title: "R&D", link: "research-development" },
-//   { image: projectsImg, title: "Projects", link: "projects" },
-//   { image: industriesImg, title: "Industries", link: "mechanical-industries" },
-//   { image: AboutImg, title: "About Us", link: "about" },
+//   { image: steelStructureImg, title: "Steel Structure", link: "/structural-steel" },
+//   { image: mechanicalImg, title: "Mechanical", link: "/mechanical" },
+//   { image: rndImg, title: "R&D", link: "/rnd" },
+//   { image: projectsImg, title: "Projects", link: "/projects" },
+//   { image: industriesImg, title: "Industries", link: "/industries" },
+//   { image: AboutImg, title: "About Us", link: "/about" },
 // ];
 
 // // ⚙️ Services section data
@@ -33,7 +35,7 @@
 //     description:
 //       "We provide precise structural steel detailing to ensure accurate fabrication and seamless construction management.",
 //     image: structuralImg,
-//     link: "#",
+//     link: "/steel-structure",
 //   },
 //   {
 //     title: "Steel Detailing Services",
@@ -41,7 +43,7 @@
 //     description:
 //       "Our steel detailing services offer comprehensive solutions for structural projects, ensuring high accuracy and quality.",
 //     image: steelDetailingImg,
-//     link: "#",
+//     link: "/steel-detailing",
 //   },
 //   {
 //     title: "Mechanical Engineering",
@@ -49,23 +51,23 @@
 //     description:
 //       "Our mechanical engineering solutions cover design, analysis, and optimization of machinery and systems for efficiency and reliability.",
 //     image: mechanicalServiceImg,
-//     link: "#",
+//     link: "/mechanical",
 //   },
 // ];
 
 // const Home = () => {
 //   // 🧭 Slick carousel configuration
 //   const sliderSettings = {
-//     dots: false, // No navigation dots
-//     infinite: true, // Loop slides infinitely
-//     speed: 800, // Transition speed
+//     dots: false,
+//     infinite: true,
+//     speed: 800,
 //     slidesToShow: 1,
 //     slidesToScroll: 1,
-//     autoplay: true, // Auto-slide enabled
-//     autoplaySpeed: 2000, // Delay between slides
-//     fade: true, // Smooth fade effect
-//     arrows: true, // Left/Right arrows visible
-//     pauseOnHover: false, // Continue autoplay even when hovered
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     fade: true,
+//     arrows: true,
+//     pauseOnHover: false,
 //   };
 
 //   return (
@@ -77,21 +79,13 @@
 //         <Slider {...sliderSettings}>
 //           {slides.map((slide, index) => (
 //             <div key={index} className="relative w-full h-[80vh] md:h-screen">
-//               {/* 🌄 Slide Image (full screen, responsive) */}
+//               {/* 🌄 Slide Image */}
 //               <img
 //                 src={slide.image}
 //                 alt={slide.title}
 //                 loading="eager"
 //                 decoding="async"
-//                 className="
-//                   w-full
-//                   h-[80vh] md:h-screen
-//                   object-cover
-//                   brightness-90
-//                   contrast-110
-//                   transition-transform duration-700 ease-in-out
-//                   hover:scale-105
-//                 "
+//                 className="w-full h-[80vh] md:h-screen object-cover brightness-90 contrast-110 transition-transform duration-700 ease-in-out hover:scale-105"
 //               />
 
 //               {/* 📝 Overlay Text + Explore Button */}
@@ -99,15 +93,12 @@
 //                 <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">
 //                   {slide.title}
 //                 </h1>
-//                 <Link
+//                 <RouterLink
 //                   to={slide.link}
-//                   smooth={true}
-//                   duration={700}
-//                   offset={-80}
 //                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-lg font-medium cursor-pointer transition"
 //                 >
 //                   Explore
-//                 </Link>
+//                 </RouterLink>
 //               </div>
 //             </div>
 //           ))}
@@ -130,21 +121,21 @@
 //             </p>
 //           </div>
 
-//           {/* 🧩 Responsive Services Grid (1 → 2 → 3 columns) */}
+//           {/* 🧩 Services Grid */}
 //           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 //             {services.map((service, index) => (
 //               <div
 //                 key={index}
 //                 className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-1"
 //               >
-//                 {/* 🖼 Service Icon/Image */}
+//                 {/* 🖼 Service Image */}
 //                 <img
 //                   src={service.image}
 //                   alt={service.title}
 //                   className="w-20 h-20 object-contain mb-4"
 //                 />
 
-//                 {/* 🧾 Service Titles */}
+//                 {/* 🧾 Titles */}
 //                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
 //                   {service.title}
 //                 </h3>
@@ -159,21 +150,66 @@
 //                   {service.description}
 //                 </p>
 
-//                 {/* 🔗 "Read More" Link */}
-//                 <a
-//                   href={service.link}
+//                 {/* 🔗 Read More */}
+//                 <RouterLink
+//                   to={service.link}
 //                   className="text-blue-600 font-semibold hover:text-blue-800 transition text-sm md:text-base"
 //                 >
 //                   Read More →
-//                 </a>
+//                 </RouterLink>
 //               </div>
 //             ))}
 //           </div>
 
-//           {/* 🧭 Divider Line */}
+//           {/* 🧭 Divider */}
 //           <div className="border-t border-gray-300 mt-12 md:mt-16"></div>
 //         </div>
 //       </section>
+
+//       {/* ==============================
+//     🌟 OUR VISION & MISSION SECTION
+//     ============================== */}
+// <section id="vision-mission" className="bg-blue-900 text-white py-20">
+//   <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+    
+//     {/* ♟️ Left Side Image */}
+//     <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+//       <img
+//         src={chess}
+//         alt="Vision & Mission"
+//         className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
+//       />
+//     </div>
+
+//     {/* 📝 Right Side Text */}
+//     <div className="w-full md:w-1/2">
+//       <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
+//         OUR VISION & MISSION
+//       </h2>
+
+//       {/* Vision */}
+//       <div className="mb-6">
+//         <h3 className="text-2xl font-semibold mb-2">Vision</h3>
+//         <p className="text-lg leading-relaxed">
+//           To deliver high-quality engineering solutions within the time schedule every time, 
+//           by exceeding customer expectations through an organizational culture that encourages 
+//           continuous improvement and results in repeat business.
+//         </p>
+//       </div>
+
+//       {/* Mission */}
+//       <div>
+//         <h3 className="text-2xl font-semibold mb-2">Mission</h3>
+//         <p className="text-lg leading-relaxed">
+//           To evolve as a market leader by sustained delivery of world-class engineering services, 
+//           with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
+//           for progressive growth to leverage value to all stakeholders.
+//         </p>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
 //     </div>
 //   );
 // };
@@ -181,11 +217,9 @@
 // export default Home;
 
 
-//===============
-
 import React from "react";
 import Slider from "react-slick";
-import { Link as RouterLink } from "react-router-dom"; // ✅ For navigation
+import { Link } from "react-router-dom"; // ✅ Changed from react-scroll to react-router-dom
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -201,17 +235,17 @@ import steelDetailingImg from "../../assets/steel-detailing-services.webp";
 import mechanicalServiceImg from "../../assets/Mechanical-Engineering-Services.jpeg";
 import chess from "../../assets/chess.jpg";
 
-// 🎞️ Carousel slides data
+// 🎞 Carousel slides data
 const slides = [
-  { image: steelStructureImg, title: "Steel Structure", link: "/structural-steel" },
+  { image: steelStructureImg, title: "Structural Steel", link: "/steel-structure" },
   { image: mechanicalImg, title: "Mechanical", link: "/mechanical" },
-  { image: rndImg, title: "R&D", link: "/rnd" },
+  { image: rndImg, title: "R&D", link: "/research-development" },
   { image: projectsImg, title: "Projects", link: "/projects" },
   { image: industriesImg, title: "Industries", link: "/industries" },
   { image: AboutImg, title: "About Us", link: "/about" },
 ];
 
-// ⚙️ Services section data
+// ⚙ Services section data
 const services = [
   {
     title: "Structural Steel Detailing",
@@ -219,7 +253,7 @@ const services = [
     description:
       "We provide precise structural steel detailing to ensure accurate fabrication and seamless construction management.",
     image: structuralImg,
-    link: "/steel-structure",
+    link: "/structural-engineering",
   },
   {
     title: "Steel Detailing Services",
@@ -227,7 +261,7 @@ const services = [
     description:
       "Our steel detailing services offer comprehensive solutions for structural projects, ensuring high accuracy and quality.",
     image: steelDetailingImg,
-    link: "/steel-detailing",
+    link: "/structuralsteeldetailingservices",
   },
   {
     title: "Mechanical Engineering",
@@ -257,19 +291,26 @@ const Home = () => {
   return (
     <div className="w-full overflow-hidden">
       {/* ==============================
-           HERO SECTION / IMAGE CAROUSEL
+          🏠 HERO SECTION / IMAGE SLIDER
           ============================== */}
       <section id="home" className="relative w-full h-[80vh] md:h-screen overflow-hidden">
         <Slider {...sliderSettings}>
           {slides.map((slide, index) => (
             <div key={index} className="relative w-full h-[80vh] md:h-screen">
-              {/* 🌄 Slide Image */}
               <img
                 src={slide.image}
                 alt={slide.title}
                 loading="eager"
                 decoding="async"
-                className="w-full h-[80vh] md:h-screen object-cover brightness-90 contrast-110 transition-transform duration-700 ease-in-out hover:scale-105"
+                className="
+                  w-full
+                  h-[80vh] md:h-screen
+                  object-cover
+                  brightness-90
+                  contrast-110
+                  transition-transform duration-700 ease-in-out
+                  hover:scale-105
+                "
               />
 
               {/* 📝 Overlay Text + Explore Button */}
@@ -277,12 +318,13 @@ const Home = () => {
                 <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-white drop-shadow-lg">
                   {slide.title}
                 </h1>
-                <RouterLink
+                {/* ✅ Updated Explore Button (uses react-router-dom Link) */}
+                <Link
                   to={slide.link}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg text-sm md:text-lg font-medium cursor-pointer transition"
                 >
                   Explore
-                </RouterLink>
+                </Link>
               </div>
             </div>
           ))}
@@ -290,36 +332,30 @@ const Home = () => {
       </section>
 
       {/* ==============================
-          ⚙️ OUR SERVICES SECTION
+          ⚙ OUR SERVICES SECTION
           ============================== */}
       <section id="our-services" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-          {/* 🧱 Section Heading */}
           <div className="text-center mb-10 md:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               OUR SERVICES
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              We offer a wide range of professional engineering services tailored
-              to meet your project requirements and ensure excellence in every phase.
+             At MECHYAM AI DESIGN SOLUTIONS (MADS), we specialize in delivering precise, scalable, and forward-thinking engineering solutions. As a young company with a seasoned leadership team boasting over 15 years of deep industry expertise, we blend agility with experience to solve real-world challenges across engineering design, structural integrity, and advanced data analysis
             </p>
           </div>
 
-          {/* 🧩 Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition transform hover:-translate-y-1"
               >
-                {/* 🖼 Service Image */}
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-20 h-20 object-contain mb-4"
                 />
-
-                {/* 🧾 Titles */}
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-1 md:mb-2">
                   {service.title}
                 </h3>
@@ -328,71 +364,58 @@ const Home = () => {
                     {service.subTitle}
                   </h4>
                 )}
-
-                {/* 🗒 Description */}
                 <p className="text-gray-500 mb-4 text-sm md:text-base leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* 🔗 Read More */}
-                <RouterLink
+                <Link
                   to={service.link}
                   className="text-blue-600 font-semibold hover:text-blue-800 transition text-sm md:text-base"
                 >
                   Read More →
-                </RouterLink>
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* 🧭 Divider */}
           <div className="border-t border-gray-300 mt-12 md:mt-16"></div>
         </div>
       </section>
 
       {/* ==============================
-    🌟 OUR VISION & MISSION SECTION
-    ============================== */}
-<section id="vision-mission" className="bg-blue-900 text-white py-20">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          🌟 OUR VISION & MISSION SECTION
+          ============================== */}
+      <section id="vision-mission" className="bg-blue-900 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+          <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+            <img
+              src={chess}
+              alt="Vision & Mission"
+              className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
+            />
+          </div>
+
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
+              OUR VISION & MISSION
+            </h2>
+
+            <div className="mb-6">
+              <h3 className="text-2xl font-semibold mb-2">Vision</h3>
+              <p className="text-lg leading-relaxed">
+                To shape engineering solutions that rise from complexity with clarity—anchored in integrity, guided by purpose, and built to last. we aim to bring structure and insight to what was once unformed.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-2">Mission</h3>
+              <p className="text-lg leading-relaxed">
+               To serve as skilled stewards of design—transforming raw potential into systems of strength, precision, and meaning. Through thoughtful engineering and principled collaboration, we build with intention and resilience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     
-    {/* ♟️ Left Side Image */}
-    <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
-      <img
-        src={chess}
-        alt="Vision & Mission"
-        className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
-      />
-    </div>
-
-    {/* 📝 Right Side Text */}
-    <div className="w-full md:w-1/2">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
-        OUR VISION & MISSION
-      </h2>
-
-      {/* Vision */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-semibold mb-2">Vision</h3>
-        <p className="text-lg leading-relaxed">
-          To deliver high-quality engineering solutions within the time schedule every time, 
-          by exceeding customer expectations through an organizational culture that encourages 
-          continuous improvement and results in repeat business.
-        </p>
-      </div>
-
-      {/* Mission */}
-      <div>
-        <h3 className="text-2xl font-semibold mb-2">Mission</h3>
-        <p className="text-lg leading-relaxed">
-          To evolve as a market leader by sustained delivery of world-class engineering services, 
-          with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
-          for progressive growth to leverage value to all stakeholders.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
     </div>
   );
