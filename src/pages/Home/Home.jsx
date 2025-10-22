@@ -122,8 +122,7 @@ const Home = () => {
               OUR SERVICES
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              We offer a wide range of professional engineering services tailored
-              to meet your project requirements and ensure excellence in every phase.
+             At MECHYAM AI DESIGN SOLUTIONS (MADS), we specialize in delivering precise, scalable, and forward-thinking engineering solutions. As a young company with a seasoned leadership team boasting over 15 years of deep industry expertise, we blend agility with experience to solve real-world challenges across engineering design, structural integrity, and advanced data analysis
             </p>
           </div>
 
@@ -184,65 +183,20 @@ const Home = () => {
             <div className="mb-6">
               <h3 className="text-2xl font-semibold mb-2">Vision</h3>
               <p className="text-lg leading-relaxed">
-                To deliver high-quality engineering solutions within the time schedule every time, 
-                by exceeding customer expectations through an organizational culture that encourages 
-                continuous improvement and results in repeat business.
+                To shape engineering solutions that rise from complexity with clarity—anchored in integrity, guided by purpose, and built to last. we aim to bring structure and insight to what was once unformed.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-semibold mb-2">Mission</h3>
               <p className="text-lg leading-relaxed">
-                To evolve as a market leader by sustained delivery of world-class engineering services, 
-                with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
-                for progressive growth to leverage value to all stakeholders.
+               To serve as skilled stewards of design—transforming raw potential into systems of strength, precision, and meaning. Through thoughtful engineering and principled collaboration, we build with intention and resilience.
               </p>
             </div>
           </div>
         </div>
       </section>
-    🌟 OUR VISION & MISSION SECTION
-    ============================== */
-<section id="vision-mission" className="bg-blue-900 text-white py-20">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
     
-    {/* ♟️ Left Side Image */}
-    <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
-      <img
-        src={chess}
-        alt="Vision & Mission"
-        className="rounded-full w-72 h-72 object-cover shadow-lg border-4 border-white"
-      />
-    </div>
-
-    {/* 📝 Right Side Text */}
-    <div className="w-full md:w-1/2">
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left">
-        OUR VISION & MISSION
-      </h2>
-
-      {/* Vision */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-semibold mb-2">Vision</h3>
-        <p className="text-lg leading-relaxed">
-          To deliver high-quality engineering solutions within the time schedule every time, 
-          by exceeding customer expectations through an organizational culture that encourages 
-          continuous improvement and results in repeat business.
-        </p>
-      </div>
-
-      {/* Mission */}
-      <div>
-        <h3 className="text-2xl font-semibold mb-2">Mission</h3>
-        <p className="text-lg leading-relaxed">
-          To evolve as a market leader by sustained delivery of world-class engineering services, 
-          with an emphasis on high-quality and ethical standards, fortifying world-wide corporate alliances, 
-          for progressive growth to leverage value to all stakeholders.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
     </div>
   );
