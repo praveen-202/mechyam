@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="flex items-center mb-8">
               <img src={MADS} alt="Mechyam Logo" className="w-20 h-30 mr-3" />
-              <h1 className="text-3xl font-bold text-blue-700">MECHYAM</h1>
+              <h1 className="text-3xl font-bold text-blue-800">Mechyam</h1>
             </div>
 
             <h2 className="text-lg font-semibold mb-4 tracking-wide">CONTACT</h2>

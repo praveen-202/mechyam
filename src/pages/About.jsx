@@ -50,21 +50,26 @@ const About = () => (
             </p>
 
             <p className="text-lg text-gray-800 leading-relaxed">
-              Founded in 2025, MECHYAM is a lean and agile firm powered by a
+              Founded in 2025, <span className="font-semibold">MECHYAM</span> is a lean and agile firm powered by a
               leadership team with over 15 years of industry experience in
               mechanical design, structural analysis, and data-driven engineering. While we are young as a company, our roots run deep —
               built on integrity, technical mastery, and a shared belief that
               great design begins with understanding, not assumptions.
             </p>
 
-            <p className="text-lg text-gray-800 leading-relaxed">
-              <span className="block font-semibold mb-1 text-color-blue-900">
+            <div className="text-lg text-gray-800 leading-relaxed space-y-2">
+              <div className="block font-semibold mb-1 text-color-red-900 bg-gray-200 px-3 py-2 rounded">
                 Our name reflects our philosophy:
-              </span>
-              “Mech” for the mechanical core of what we do. <br />
-              “Yam” for the sea — symbolizing the depth, uncertainty, and
-              potential of the engineering challenges we take on.
-            </p>
+              </div>
+              <div>
+                <span className="block font-semibold mb-1 text-color-blue-900">“Mech”</span>
+                <span>- for the mechanical core of what we do.</span>
+              </div>
+              <div>
+                <span className="block font-semibold mb-1 text-color-blue-900">“Yam”</span>
+                <span>- for the sea — symbolizing the depth, uncertainty, and potential of the engineering challenges we take on.</span>
+              </div>
+            </div>
 
             <p className="text-lg text-gray-800 leading-relaxed">
               From concept development and CAD modelling to structural
@@ -88,8 +93,8 @@ const About = () => (
             />
             
             {/* Text below image */}
-            <div className="mt-6 text-lg text-gray-800 leading-relaxed px-1 md:px-2">
-              <p className="mb-4 text-justify">
+            <div className="mt-6 text-lg text-gray-800 leading-relaxed px-1 md:px-2 space-y-4">
+              <p className="text-justify">
                 Our designs balance innovation with practicality — ensuring that
                 every model we create aligns with real-world performance, cost,
                 and manufacturability.
