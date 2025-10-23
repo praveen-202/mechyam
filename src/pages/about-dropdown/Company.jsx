@@ -16,6 +16,7 @@ const Company = () => (
             width: "100vw",
             objectFit: "cover",
             objectPosition: "center",
+            
           }}
         />
         <div

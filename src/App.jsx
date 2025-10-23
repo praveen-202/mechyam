@@ -11,6 +11,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 import CareerPage from "./pages/Career/CareerPage.jsx";
 import JobDetailsPage from "./pages/Career/JobDetailsPage.jsx";
 import Home from "./pages/Home/Home.jsx";
+import EngineeringDesign from "./pages/structural-steel-dropdown/EngineeringDesign";
 import StructuralEngineering from "./pages/structural-steel-dropdown/StructuralEngineering";
 import StructuralSteelDetailingServices from "./pages/structural-steel-dropdown/StructuralSteelDetailingServices";
 import BridgeDetailingServices from "./pages/structural-steel-dropdown/BridgeDetailingServices";
@@ -25,6 +26,7 @@ import Company from "./pages/about-dropdown/Company";
 import Testimonials from "./pages/about-dropdown/OurClients";
 import AdminPage from "./components/AdminPage/AdminPage";
 import Footer from "./pages/Footer.jsx";
+
 
 // ✅ ScrollToTop Component (inside App for simplicity)
 const ScrollToTop = () => {
@@ -46,6 +48,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/engineering-design" element={<EngineeringDesign />} />
         <Route path="/steel-structure" element={<StructuralSteel />} />
         <Route path="/structural-engineering" element={<StructuralEngineering />} />
         <Route path="/structuralsteeldetailingservices" element={<StructuralSteelDetailingServices />} />
@@ -70,6 +73,7 @@ function App() {
         <Route path="/career/:id" element={<JobDetailsPage />} />
         <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
+      
       <Footer />
     </>
   );
