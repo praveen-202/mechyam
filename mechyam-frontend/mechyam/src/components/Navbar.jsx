@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* Left: Logo + Company Name */}
         <div className="flex items-center space-x-3">
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            <img src={logo} alt="Mechyam Logo" className="h-16 w-16" />
+            <img src={logo} alt="Mechyam Logo" className="h-16 w-17" />
           </Link>
           <span className="text-2xl font-bold text-blue-900">Mechyam</span>
         </div>
@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-all duration-200 z-50">
               <ul className="py-2">
                 <li><Link to="/company" className="block px-4 py-2 hover:bg-gray-100">Company</Link></li>
-                <li><Link to="/testimonials" className="block px-4 py-2 hover:bg-gray-100">Testimonials</Link></li>
+                <li><Link to="/testimonials" className="block px-4 py-2 hover:bg-gray-100">Our Clients</Link></li>
               </ul>
             </div>
           </li>

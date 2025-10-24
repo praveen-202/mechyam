@@ -106,7 +106,7 @@ import Contracting from "./pages/industries-dropdown/Contracting";
 import OilAndGas from "./pages/industries-dropdown/OilAndGas";
 import Transportation from "./pages/industries-dropdown/Transportation";
 import Company from "./pages/about-dropdown/Company";
-import Testimonials from "./pages/about-dropdown/Testimonials";
+import Testimonials from "./pages/about-dropdown/OurClients.jsx";
 import AdminPage from "./components/AdminPage/AdminPage";
 import Footer from "./pages/Footer.jsx";
 import DetailedJobList from "./pages/DetailedJobList";
